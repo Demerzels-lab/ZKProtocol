@@ -49,6 +49,13 @@
         "details": "1. Implement Privacy Controls Panel (Standard/Enhanced/Maximum)\n2. Add Trade & Transfer Privately functionality (Step 03 style)\n3. Build Enhanced Privacy Score System\n4. Add Transaction Privacy Verification\n5. Implement ZK proof status tracking\n6. Add privacy level indicators dan cryptographic guarantees\n7. Update UI dengan feature cards seperti Erebus original\n8. Test semua privacy features",
         "status": "completed",
         "priority": "high"
+      },
+      "8": {
+        "id": "8",
+        "content": "Rebranding & User Flow Enhancement",
+        "details": "1. Rebrand dari Erebus Protocol ke ZKProtocol\n2. Ganti section 'How It Works' menjadi 'User Flow'\n3. Create 4-step user journey yang user-friendly\n4. Update semua branding references di website\n5. Update document title dan meta tags\n6. Maintain semua functionality existing\n7. Deploy updated version",
+        "status": "completed",
+        "priority": "high"
       }
     }
   }

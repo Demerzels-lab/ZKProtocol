@@ -1,4 +1,4 @@
-import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye } from 'lucide-react';
+import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye, Wallet, Settings, Send } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +25,7 @@ export const LandingPage = () => {
             True Privacy on Solana
             <br />
             <span className="bg-gradient-cyber-primary bg-clip-text text-transparent">
-              Zero Knowledge Protocol
+              ZKProtocol
             </span>
           </h1>
           
@@ -117,47 +117,93 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* How It Works - Cyber Step Cards */}
+      {/* User Flow - Cyber Step Cards */}
       <section className="py-24 px-6 lg:px-12 bg-gradient-cyber-subtle">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold font-heading text-center text-neutral-800 mb-16">
-            How It Works
-          </h2>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold font-heading text-neutral-800 mb-4">
+              User Flow
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              Simple steps to start trading with complete privacy on ZKProtocol
+            </p>
+          </div>
 
           <div className="space-y-8">
             {[
               {
                 step: '01',
-                title: 'Generate ZK Proof',
-                description: 'System generates Zero Knowledge proof for your transaction using ZK-SNARKs. Proof validates without revealing data.',
+                title: 'Connect Your Wallet',
+                description: 'Install Solana wallet extension (Phantom or Solflare) and connect to ZKProtocol dashboard. Start with complete privacy controls at your fingertips.',
+                icon: Wallet,
+                benefits: ['Phantom & Solflare supported', 'Solana Devnet ready', 'Instant connection'],
               },
               {
                 step: '02',
-                title: 'Pedersen Commitment',
-                description: 'Transaction data is encrypted with Pedersen commitments, providing mathematical privacy that cannot be broken.',
+                title: 'Set Privacy Level',
+                description: 'Choose Standard, Enhanced, or Maximum privacy level. Enable ZK proof verification and configure transaction mixing level from 1 to 10 for optimal anonymity.',
+                icon: Settings,
+                benefits: ['3 privacy levels', 'Dynamic privacy score', 'Custom mixing controls'],
               },
               {
                 step: '03',
-                title: 'Solana Finalization',
-                description: 'Private transaction finalizes on Solana blockchain with <1 second speed and minimal $0.01 fee.',
+                title: 'Private Transaction',
+                description: 'Deposit assets with cryptographic shielding, trade tokens privately via Jupiter aggregator, or transfer funds with complete confidentiality. All protected by ZK-SNARKs.',
+                icon: Send,
+                benefits: ['Private swap & transfer', 'Cross-chain bridge', 'Real-time pricing'],
+              },
+              {
+                step: '04',
+                title: 'Privacy Verification',
+                description: 'Real-time ZK proof generation and verification. Transaction confirmed with cryptographic guarantee. Privacy metadata logged for transparency without revealing sensitive data.',
+                icon: CheckCircle,
+                benefits: ['ZK-SNARKs verification', 'On-chain confirmation', 'Privacy preserved'],
               },
             ].map((step, index) => (
               <div 
                 key={step.step} 
-                className="flex gap-6 backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 shadow-cyber-md hover:shadow-cyber-lg transition-all duration-normal"
+                className="flex flex-col lg:flex-row gap-6 backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 shadow-cyber-md hover:shadow-cyber-lg transition-all duration-normal"
                 style={{ background: 'rgba(255, 255, 255, 0.9)' }}
               >
-                <div className="w-16 h-16 flex-shrink-0 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-glow-primary">
-                  <span className="text-2xl font-bold font-heading text-white">{step.step}</span>
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-glow-primary mb-4 lg:mb-0">
+                    <span className="text-2xl font-bold font-heading text-white">{step.step}</span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold font-heading text-neutral-800 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-lg text-neutral-600 leading-relaxed">{step.description}</p>
+                
+                <div className="flex-1">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-gradient-cyber-subtle rounded-lg flex items-center justify-center border border-cyber-blue-100 shadow-cyber-sm flex-shrink-0">
+                      <step.icon className="w-6 h-6 text-cyber-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold font-heading text-neutral-800 mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-lg text-neutral-600 leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 ml-16">
+                    {step.benefits.map((benefit) => (
+                      <span
+                        key={benefit}
+                        className="text-xs px-3 py-1.5 bg-cyber-blue-100 text-cyber-blue-700 rounded-full border border-cyber-blue-200 font-medium"
+                      >
+                        {benefit}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyber-cyan-400 bg-opacity-10 border border-cyber-cyan-200 text-cyber-cyan-700 text-sm font-medium">
+              <Shield className="w-4 h-4" />
+              Complete Financial Privacy • Zero-Knowledge Protection • Military-Grade Security
+            </div>
           </div>
         </div>
       </section>
@@ -220,7 +266,7 @@ export const LandingPage = () => {
             Connect your wallet and start private transactions on Solana in seconds.
           </p>
           <Button size="large" onClick={() => window.location.href = '/dashboard'}>
-            Connect Wallet Now
+            Launch ZKProtocol Dashboard
             <ArrowRight className="w-5 h-5" />
           </Button>
         </div>

@@ -28,7 +28,7 @@ export const Navbar = () => {
             <div className="p-1.5 rounded-lg bg-gradient-cyber-primary shadow-cyber-md group-hover:shadow-glow-primary transition-all duration-normal">
               <Shield className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold font-heading text-neutral-800">Erebus Protocol</span>
+            <span className="text-xl font-bold font-heading text-neutral-800">ZKProtocol</span>
           </Link>
 
           {/* Desktop Navigation */}
