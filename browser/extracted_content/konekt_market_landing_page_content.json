@@ -1,0 +1,56 @@
+📄 Extracted from page: konekt.market
+URL: https://konekt.market/
+
+Extracted content:
+```json
+{
+  "title": "konekt.market",
+  "url": "https://konekt.market/",
+  "summary": "The konekt.market landing page presents a comprehensive overview of its Web3 communication and payment platform. Structurally, it begins with an announcement banner and a likely persistent navigation menu (also replicated in the footer). The main content is organized into distinct, vertically flowing sections, each introduced by a prominent heading and supported by explanatory text and bullet points. Key sections include \"The Vision\" and \"The Core,\" detailing the platform's foundation on NFT phone numbers for identity, privacy, and communication. A dedicated \"Communication Layer\" further explains peer-to-peer interactions, while the \"Roadmap & Future Possibilities\" outlines a phased development, including micro-payments and a marketplace. The \"Payment Layer\" section elaborates on the x402 protocol for instant transactions. The page incorporates token information (GLMR, MOVR) and recent news, concluding with an extensive footer containing legal links and a comprehensive list of navigational resources for community, developers, and contact information, reflecting a clear information architecture guiding users through the platform's vision and functionality.",
+  "key_points": [
+    "Core Proposition: Rebuilding decentralized communication and payments using on-chain NFT phone numbers for identity.",
+    "Identity & Ownership: Users mint a single NFT phone number, providing direct, transferable, and tradable ownership, replacing traditional carrier-owned identities.",
+    "Secure Communication: Offers peer-to-peer calling, encrypted messaging (wallet-signed, not stored), and a seamless browser experience without installations.",
+    "Decentralized Design: Built on Solana with wallet-verified authentication, emphasizing no central database or account recovery.",
+    "Payment Layer (x402 Protocol): Implements a native, instant, and automatic pay-per-action micro-payment system, allowing users, creators, and AI agents to earn directly.",
+    "Roadmap: Includes phased development from identity/communication to real-time micro-payments, a decentralized marketplace, and future expansion with AI integration and governance.",
+    "Ecosystem Support: Provides links for funding, developer relations, documentation, community (ambassador, forums), and integrates with Glimmer (GLMR) and Moonriver (MOVR) tokens.",
+    "Information Architecture: The page is structured with clear headings and distinct sections to guide the user through the platform's vision, core features, and future development, complemented by a comprehensive navigation system."
+  ],
+  "relevant_links": [
+    "https://quests.konekt.market.network/",
+    "https://x.com/KonektMarket",
+    "/",
+    "/build/grants",
+    "/build/grants/developer-relations",
+    "/build/grants/marketing-support",
+    "https://docs.konekt.market.network/",
+    "https://immunefi.com/bounty/konekt.marketnetwork/",
+    "https://academy.konekt.market.network/",
+    "https://substack.com/@x402founder",
+    "/community/ambassador",
+    "https://forum.konekt.market.network/",
+    "/contract",
+    "https://konekt.market.foundation/",
+    "/contract/contact",
+    "/contract/careers",
+    "/contract/brand-marketing",
+    "/moonrise",
+    "/newsletter",
+    "/networks",
+    "/networks/konekt.market",
+    "/networks/moonriver",
+    "https://dapp.konekt.market/",
+    "/build",
+    "/news?categories=announcements",
+    "/news?categories=blogs",
+    "/news/a-new-konekt.market-2024-product-roadmap-advancing-integrated-web3",
+    "google.com",
+    "/news",
+    "/terms-of-use",
+    "/privacy-policy",
+    "viewsourcelink"
+  ],
+  "file_name": "konekt_market_landing_page_content.json"
+}
+```

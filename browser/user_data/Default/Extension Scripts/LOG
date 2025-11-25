@@ -1,2 +1,3 @@
-2025/11/25-15:50:38.627 83c Creating DB /workspace/browser/user_data/Default/Extension Scripts since it was missing.
-2025/11/25-15:50:38.644 83c Reusing MANIFEST /workspace/browser/user_data/Default/Extension Scripts/MANIFEST-000001
+2025/11/25-17:26:23.093 275 Reusing MANIFEST /workspace/browser/user_data/Default/Extension Scripts/MANIFEST-000001
+2025/11/25-17:26:23.097 275 Recovering log #3
+2025/11/25-17:26:23.100 275 Reusing old log /workspace/browser/user_data/Default/Extension Scripts/000003.log 
