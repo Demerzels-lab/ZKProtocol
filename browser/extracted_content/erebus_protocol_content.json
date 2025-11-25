@@ -1,0 +1,127 @@
+📄 Extracted from page: Erebus Protocol - ZK Privacy on Solana
+URL: https://erebusprotocol.com/
+
+Extracted content:
+```json
+{
+  "title": "Erebus Protocol - ZK Privacy on Solana",
+  "url": "https://erebusprotocol.com/",
+  "summary": "Erebus Protocol offers a solution for secure and private financial transactions on the Solana blockchain using zero-knowledge cryptography. It enables users to perform private deposits, trade tokens confidentially via Jupiter integration, and bridge assets cross-chain between Ethereum and Solana with Wormhole, all while maintaining privacy. The protocol emphasizes military-grade security through zk-SNARKs, lightning-fast transactions on Solana, and true privacy with no KYC requirements. Users can connect their Solana wallet, deposit funds to shield their transactions, and then trade or transfer assets privately. The platform aims to provide a fully private DeFi experience with quick transaction times and low fees.",
+  "key_points": [
+    {
+      "section": "Header",
+      "elements": [
+        "Page Title: Erebus Protocol - ZK Privacy on Solana",
+        "Erebus Token Address Displayed: $EREBUS : DiTbx2dRkBM5phu3WtmRHZwzjCFhdnKWgSXaoN8opump",
+        "Navigation: HOME, FEATURES, ROADMAP, DOCS, WHITEPAPER, GITHUB",
+        "Wallet Functionality: Connect, Change wallet, Disconnect"
+      ]
+    },
+    {
+      "section": "Hero Section - The Underworld of Privacy",
+      "elements": [
+        "Slogan: Secure and private transactions using zero-knowledge cryptography.",
+        "Benefit: Protect your financial data with advanced privacy technology.",
+        "Call-to-Action Buttons: Learn More, Connect"
+      ]
+    },
+    {
+      "section": "Core Features",
+      "elements": [
+        "Overall: Advanced privacy technology for secure transactions",
+        "Private Deposits: Secure assets with zero-knowledge proofs, maintain transaction confidentiality on Solana.",
+        "Private Trading: Trade tokens with complete privacy, powered by Jupiter aggregator with ZK privacy layer.",
+        "Cross-Chain Bridge: Bridge assets between Ethereum and Solana networks, powered by Wormhole with additional privacy features."
+      ]
+    },
+    {
+      "section": "Why Choose Erebus?",
+      "elements": [
+        "Overall: Built on cutting-edge cryptography and battle-tested blockchain infrastructure",
+        "Military-Grade Security: zk-SNARKs and Pedersen commitments ensure mathematical privacy guarantees.",
+        "Lightning Fast: Powered by Solana's high-performance blockchain with sub-second finality.",
+        "True Privacy: Zero-knowledge proofs keep transactions completely confidential.",
+        "No KYC Required: Start immediately without identity verification or personal information."
+      ]
+    },
+    {
+      "section": "How It Works",
+      "elements": [
+        "Overall: Three simple steps to complete privacy",
+        "01 Connect Your Wallet: Use any Solana wallet (e.g., Phantom, Solflare), no registration or personal info required.",
+        "02 Deposit & Shield: Send assets into the protocol, advanced cryptography shields transactions, creating an unbreakable privacy layer.",
+        "03 Trade & Transfer Privately: Swap tokens, transfer funds, or bridge assets – all with complete privacy."
+      ]
+    },
+    {
+      "section": "Statistics",
+      "elements": [
+        "100% Private",
+        "<1s Transaction Time",
+        "$0.01 Average Fee",
+        "24/7 Available"
+      ]
+    },
+    {
+      "section": "Call to Action - Enter the Underworld",
+      "elements": [
+        "Message: Join the revolution of truly private DeFi. Your transactions, your privacy, your control.",
+        "Button: Launch Application (labeled with No KYC, Fully Private, Instant)"
+      ]
+    },
+    {
+      "section": "Footer",
+      "elements": [
+        "Copyright: © 2025 Erebus Protocol. Privacy by design."
+      ]
+    },
+    {
+      "section": "Application Access / Dashboard Functionality",
+      "elements": [
+        "The page strongly indicates access to a web application or dashboard via 'Connect' and 'Launch Application' buttons.",
+        "Implied wallet integration for depositing, trading, and transferring funds within the protocol.",
+        "No explicit details about a dashboard UI are given, but the functionality described (deposit, trade, transfer) would occur within an application interface."
+      ]
+    }
+  ],
+  "relevant_links": [
+    {
+      "text": "HOME",
+      "url": "#home"
+    },
+    {
+      "text": "FEATURES",
+      "url": "#features"
+    },
+    {
+      "text": "ROADMAP",
+      "url": "internal-link-roadmap"
+    },
+    {
+      "text": "DOCS",
+      "url": "internal-link-docs"
+    },
+    {
+      "text": "WHITEPAPER",
+      "url": "internal-link-whitepaper"
+    },
+    {
+      "text": "GITHUB",
+      "url": "https://github.com/erebus-protocol/erebus-privacy"
+    },
+    {
+      "text": "Learn More",
+      "url": "internal-scroll-link"
+    },
+    {
+      "text": "Connect (wallet)",
+      "url": "javascript-wallet-connect"
+    },
+    {
+      "text": "Launch Application",
+      "url": "javascript-launch-app"
+    }
+  ],
+  "file_name": "erebus_protocol_content.json"
+}
+```
