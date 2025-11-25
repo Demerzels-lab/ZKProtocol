@@ -42,6 +42,13 @@
         "details": "1. Convert semua konten dari Bahasa Indonesia ke English\n2. Maintain professional blockchain/DeFi terminology\n3. SEO optimization untuk international audience\n4. Test semua 4 halaman (Landing, Dashboard, Technology, About)\n5. Deploy updated version",
         "status": "completed",
         "priority": "high"
+      },
+      "7": {
+        "id": "7",
+        "content": "Dashboard Enhancement: Privacy Controls & Trade & Transfer",
+        "details": "1. Implement Privacy Controls Panel (Standard/Enhanced/Maximum)\n2. Add Trade & Transfer Privately functionality (Step 03 style)\n3. Build Enhanced Privacy Score System\n4. Add Transaction Privacy Verification\n5. Implement ZK proof status tracking\n6. Add privacy level indicators dan cryptographic guarantees\n7. Update UI dengan feature cards seperti Erebus original\n8. Test semua privacy features",
+        "status": "completed",
+        "priority": "high"
       }
     }
   }

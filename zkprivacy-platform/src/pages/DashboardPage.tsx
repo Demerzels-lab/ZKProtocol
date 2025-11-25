@@ -4,6 +4,9 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { PublicKey, Transaction, SystemProgram, LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { Shield, TrendingUp, Activity, Zap, Plus, ArrowDown, ArrowUp, Repeat, Eye, CheckCircle } from 'lucide-react';
 import { Button } from '../components/ui/Button';
+import { PrivacyControls } from '../components/dashboard/PrivacyControls';
+import { TradeTransferPrivately } from '../components/dashboard/TradeTransferPrivately';
+import { PrivacyProvider, usePrivacy } from '../contexts/PrivacyContext';
 import { getSolBalance, getRecentTransactions } from '../lib/solana';
 import { getSolPrice } from '../lib/jupiter';
 import { walletConnect, createTransaction as createDbTransaction, getDashboardStats } from '../lib/supabase';
@@ -26,9 +29,10 @@ interface Stats {
   gasSaved: string;
 }
 
-export const DashboardPage = () => {
+const DashboardPageContent = () => {
   const { publicKey, sendTransaction, connected, connecting } = useWallet();
   const { connection } = useConnection();
+  const { calculatePrivacyScore } = usePrivacy();
   
   const [balance, setBalance] = useState<number>(0);
   const [solPrice, setSolPrice] = useState<number>(0);
@@ -247,7 +251,7 @@ export const DashboardPage = () => {
           {[
             { label: 'Wallet Balance', value: `${balance.toFixed(4)} SOL`, subValue: `$${balanceInUsd}`, icon: Plus, gradient: 'cyber-blue' },
             { label: 'Total Transactions', value: onChainTxs.length.toString(), subValue: 'On-chain', icon: Activity, gradient: 'cyber-purple' },
-            { label: 'Privacy Score', value: `${stats?.privacyScore || 100}%`, subValue: 'Private mode', icon: Shield, gradient: 'cyber-cyan' },
+            { label: 'Privacy Score', value: `${calculatePrivacyScore()}%`, subValue: 'Privacy active', icon: Shield, gradient: 'cyber-cyan' },
             { label: 'Network', value: 'Devnet', subValue: 'Solana', icon: Zap, gradient: 'cyber-blue' },
           ].map((stat) => (
             <div 
@@ -267,6 +271,15 @@ export const DashboardPage = () => {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Privacy Controls & Trade Features */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Privacy Controls */}
+          <PrivacyControls />
+
+          {/* Trade & Transfer Privately */}
+          <TradeTransferPrivately />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -431,5 +444,14 @@ export const DashboardPage = () => {
         )}
       </div>
     </div>
+  );
+};
+
+// Wrap with PrivacyProvider
+export const DashboardPage = () => {
+  return (
+    <PrivacyProvider>
+      <DashboardPageContent />
+    </PrivacyProvider>
   );
 };

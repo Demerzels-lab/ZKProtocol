@@ -1,0 +1,27 @@
+📄 Extracted from page: Erebus Protocol - Functional Privacy Features
+URL: https://ngdcargumfnh.space.minimax.io/dashboard
+
+Extracted content:
+```json
+{
+    "title": "Erebus Protocol - Functional Privacy Features",
+    "url": "https://ngdcargumfnh.space.minimax.io/dashboard",
+    "summary": "The Erebus Protocol dashboard page acts as an initial gateway, prominently featuring a 'Connect Wallet' prompt. It emphasizes the core value proposition of 'complete privacy' and access to a 'Zero Knowledge protocol on Solana Devnet'. The page guides users to connect Solana-compatible wallets such as Phantom or Solflare to proceed. Crucially, no actual dashboard content, trading interfaces, specific privacy controls or level selectors, or any preview of functionalities are visible before a wallet is successfully connected.",
+    "key_points": [
+        "The page title is 'Erebus Protocol - Functional Privacy Features'.",
+        "The primary call to action is 'Connect Your Wallet'.",
+        "The service offers 'complete privacy' and 'Zero Knowledge protocol on Solana Devnet'.",
+        "Users are instructed to 'Select Wallet' and can 'Change wallet'.",
+        "The platform is in 'Devnet mode' and supports Phantom, Solflare, or other Solana-compatible wallets.",
+        "No actual dashboard metrics, trade/transfer components, or specific privacy level selectors are visible before wallet connection.",
+        "Navigation links visible include Home, Dashboard, Technology, and About."
+    ],
+    "relevant_links": [
+        "/",
+        "/dashboard",
+        "/technology",
+        "/about"
+    ],
+    "file_name": "erebus_protocol_dashboard_analysis.json"
+}
+```

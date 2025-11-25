@@ -1,0 +1,26 @@
+📄 Extracted from page: Erebus Protocol - Enhanced Dashboard
+URL: https://mcf5xwvu0572.space.minimax.io/dashboard
+
+Extracted content:
+```json
+{
+    "title": "Erebus Protocol - Enhanced Dashboard",
+    "url": "https://mcf5xwvu0572.space.minimax.io/dashboard",
+    "summary": "After clicking 'Connect Wallet', the page content updated to display a 'Connect Your Wallet' section. This section prompts the user to select a wallet to access the Zero Knowledge protocol on Solana Devnet. It presents options to connect specific Solana-compatible wallets like Phantom or Solflare and indicates that the wallet connection process has initiated.",
+    "key_points": [
+        "The page content changed after 'Connect Wallet' was clicked.",
+        "A new section 'Connect Your Wallet' appeared, indicating the start of the wallet connection process.",
+        "The page now explicitly lists wallet selection options: Phantom, Solflare, or other Solana-compatible wallets.",
+        "These wallet connections are specifically for 'Devnet mode'.",
+        "The purpose is to access 'Zero Knowledge protocol on Solana Devnet'.",
+        "A 'Change wallet' option is available."
+    ],
+    "relevant_links": [
+        "/",
+        "/dashboard",
+        "/technology",
+        "/about"
+    ],
+    "file_name": "erebus_dashboard_wallet_connect_update.json"
+}
+```

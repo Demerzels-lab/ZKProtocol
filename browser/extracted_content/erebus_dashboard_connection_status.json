@@ -1,0 +1,25 @@
+📄 Extracted from page: Erebus Protocol - Enhanced Dashboard
+URL: https://mcf5xwvu0572.space.minimax.io/dashboard
+
+Extracted content:
+```json
+{
+    "title": "Erebus Protocol - Enhanced Dashboard",
+    "url": "https://mcf5xwvu0572.space.minimax.io/dashboard",
+    "summary": "The page currently displays a prompt to connect a wallet to access the Erebus Protocol dashboard. It outlines the steps and options for connecting a Solana-compatible wallet (Phantom, Solflare, etc.) to utilize Zero Knowledge protocol on Solana Devnet. The actual dashboard components (Quick Stats, Privacy Controls, Trade & Transfer Privately, Transaction Actions) are not visible, indicating that a wallet connection has not yet been established or confirmed as successful.",
+    "key_points": [
+        "The page requires a wallet connection to proceed to the dashboard.",
+        "Options are available to 'Connect' a wallet, 'Change wallet', or 'Disconnect'.",
+        "It specifies 'Devnet mode' and compatible wallets like Phantom and Solflare.",
+        "The dashboard components 'Quick Stats', 'Privacy Controls', 'Trade & Transfer Privately', and 'Transaction Actions' are not visible on the page.",
+        "The current view is focused on the 'Connect Your Wallet' interface."
+    ],
+    "relevant_links": [
+        "/",
+        "/dashboard",
+        "/technology",
+        "/about"
+    ],
+    "file_name": "erebus_dashboard_connection_status.json"
+}
+```

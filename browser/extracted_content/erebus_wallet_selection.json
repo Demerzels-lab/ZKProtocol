@@ -1,0 +1,19 @@
+📄 Extracted from page: Erebus Protocol - Enhanced Dashboard
+URL: https://mcf5xwvu0572.space.minimax.io/dashboard
+
+Extracted content:
+```json
+{
+    "title": "Erebus Protocol - Enhanced Dashboard",
+    "url": "https://mcf5xwvu0572.space.minimax.io/dashboard",
+    "summary": "Upon interaction with a 'Select Wallet' prompt, a wallet selection interface (appearing as a modal or similar overlay) is presented. This interface explicitly asks the user to 'Connect a wallet on Solana to continue' and lists specific wallet options available for selection.",
+    "key_points": [
+        "A wallet selection modal/overlay has appeared after a 'Select Wallet' action.",
+        "The modal/overlay prompts the user to 'Connect a wallet on Solana to continue'.",
+        "Specific wallet options listed for selection are 'Phantom' and 'Solflare'.",
+        "The page also notes that 'Phantom, Solflare, or other Solana-compatible wallets' can be connected in Devnet mode."
+    ],
+    "relevant_links": [],
+    "file_name": "erebus_wallet_selection.json"
+}
+```
