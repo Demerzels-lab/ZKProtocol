@@ -1,0 +1,34 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Research & Technical Planning untuk Blockchain Integration",
+        "details": "1. Research Solana wallet integration (Phantom, Solflare)\n2. Study Erebus Protocol's API endpoints dan SDK usage\n3. Plan blockchain transaction flow (private deposits/transfers)\n4. Research Jupiter Aggregator integration\n5. Define technical architecture untuk privacy features",
+        "status": "pending",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Design System & UI/UX Professional",
+        "details": "1. Buat design system berdasarkan Erebus Protocol\n2. Design landing page dengan privacy/blockchain theming\n3. Design dashboard interface untuk users\n4. Design wallet connection UI\n5. Create responsive design untuk semua devices",
+        "status": "pending",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Development Fullstack Platform",
+        "details": "1. Setup React/Next.js frontend dengan wallet integration\n2. Implement blockchain wallet connection (Phantom, Solflare)\n3. Build backend API untuk blockchain interactions\n4. Implement privacy transaction features (mock/simulation)\n5. Integrate Jupiter Aggregator untuk token swapping\n6. Build dashboard dengan real-time data\n7. Setup Supabase untuk user management",
+        "status": "pending",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Testing & Deployment",
+        "details": "1. Test wallet integration di testnet/devnet\n2. Test blockchain transactions dengan small amounts\n3. Security testing untuk wallet connections\n4. Performance optimization\n5. Deploy to production environment",
+        "status": "pending",
+        "priority": "medium"
+      }
+    }
+  }
+}
