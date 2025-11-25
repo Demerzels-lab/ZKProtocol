@@ -4,22 +4,32 @@ import { Link } from 'react-router-dom';
 
 export const LandingPage = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-white py-24 px-6 lg:px-12">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 rounded-full text-primary-600 text-sm font-medium mb-6">
+    <div className="min-h-screen bg-neutral-50">
+      {/* Hero Section - Cyber-Tech Lite with Glassmorphism */}
+      <section className="relative py-24 px-6 lg:px-12 overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-cyber-subtle"></div>
+        
+        {/* Cyber Glow Orbs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-cyber-blue-500 rounded-full opacity-10 blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-purple-500 rounded-full opacity-10 blur-3xl"></div>
+        
+        <div className="relative max-w-5xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-cyber-blue-700 text-sm font-medium mb-6 backdrop-blur-xl border border-cyber-blue-200"
+               style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
             <Shield className="w-4 h-4" />
             Military-Grade Security
           </div>
           
-          <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
+          <h1 className="text-5xl lg:text-6xl font-bold font-heading text-neutral-800 mb-6 leading-tight">
             True Privacy on Solana
             <br />
-            <span className="text-primary-500">Zero Knowledge Protocol</span>
+            <span className="bg-gradient-cyber-primary bg-clip-text text-transparent">
+              Zero Knowledge Protocol
+            </span>
           </h1>
           
-          <p className="text-xl text-neutral-700 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
             Transaksi private dengan kecepatan lightning-fast menggunakan ZK-SNARKs dan Pedersen commitments. Privasi penuh tanpa KYC.
           </p>
 
@@ -35,33 +45,39 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* Trust Metrics */}
-      <section className="py-16 px-6 lg:px-12 bg-neutral-50">
+      {/* Trust Metrics - Cyber Cards */}
+      <section className="py-16 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { label: 'Finality Time', value: '<1s', icon: Zap },
-              { label: 'Transaction Fee', value: '$0.01', icon: TrendingUp },
-              { label: 'Privacy Level', value: '100%', icon: Lock },
-              { label: 'KYC Required', value: 'None', icon: CheckCircle },
+              { label: 'Finality Time', value: '<1s', icon: Zap, accent: 'cyber-cyan' },
+              { label: 'Transaction Fee', value: '$0.01', icon: TrendingUp, accent: 'cyber-blue' },
+              { label: 'Privacy Level', value: '100%', icon: Lock, accent: 'cyber-purple' },
+              { label: 'KYC Required', value: 'None', icon: CheckCircle, accent: 'cyber-cyan' },
             ].map((metric) => (
-              <div key={metric.label} className="bg-white p-8 rounded-lg border border-neutral-200 shadow-card hover:shadow-card-hover transition-shadow">
-                <metric.icon className="w-8 h-8 text-primary-500 mb-4" />
-                <div className="text-4xl font-bold text-neutral-900 mb-2">{metric.value}</div>
-                <div className="text-sm text-neutral-700">{metric.label}</div>
+              <div 
+                key={metric.label} 
+                className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 shadow-cyber-md hover:shadow-cyber-lg hover:-translate-y-1 transition-all duration-normal group"
+                style={{ background: 'rgba(255, 255, 255, 0.9)' }}
+              >
+                <div className="w-12 h-12 bg-gradient-cyber-primary rounded-lg flex items-center justify-center mb-4 shadow-cyber-sm group-hover:shadow-glow-primary transition-all duration-normal">
+                  <metric.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-4xl font-bold font-heading text-neutral-800 mb-2">{metric.value}</div>
+                <div className="text-sm text-neutral-600">{metric.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Core Features */}
+      {/* Core Features - Glassmorphism Cards */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-neutral-900 mb-4">
+          <h2 className="text-4xl font-bold font-heading text-center text-neutral-800 mb-4">
             Fitur Privasi Terdepan
           </h2>
-          <p className="text-xl text-center text-neutral-700 mb-16 max-w-2xl mx-auto">
+          <p className="text-xl text-center text-neutral-600 mb-16 max-w-2xl mx-auto">
             Platform komprehensif untuk transaksi private di Solana ecosystem
           </p>
 
@@ -85,29 +101,30 @@ export const LandingPage = () => {
             ].map((feature) => (
               <div
                 key={feature.title}
-                className="bg-neutral-50 p-8 rounded-lg border border-neutral-200 hover:-translate-y-1 hover:shadow-card-hover transition-all duration-250"
+                className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 shadow-cyber-md hover:shadow-cyber-lg hover:-translate-y-2 transition-all duration-normal group"
+                style={{ background: 'rgba(255, 255, 255, 0.8)' }}
               >
-                <div className="w-16 h-16 bg-primary-50 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-primary-500" />
+                <div className="w-16 h-16 bg-gradient-cyber-subtle rounded-lg flex items-center justify-center mb-6 border border-cyber-blue-100 shadow-cyber-sm group-hover:shadow-glow-primary transition-all duration-normal">
+                  <feature.icon className="w-8 h-8 text-cyber-blue-600" />
                 </div>
-                <h3 className="text-2xl font-semibold text-neutral-900 mb-3">
+                <h3 className="text-2xl font-semibold font-heading text-neutral-800 mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-neutral-700">{feature.description}</p>
+                <p className="text-neutral-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-24 px-6 lg:px-12 bg-neutral-50">
+      {/* How It Works - Cyber Step Cards */}
+      <section className="py-24 px-6 lg:px-12 bg-gradient-cyber-subtle">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-neutral-900 mb-16">
+          <h2 className="text-4xl font-bold font-heading text-center text-neutral-800 mb-16">
             Bagaimana Cara Kerjanya
           </h2>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {[
               {
                 step: '01',
@@ -124,16 +141,20 @@ export const LandingPage = () => {
                 title: 'Solana Finalization',
                 description: 'Transaksi private di-finalize di Solana blockchain dengan kecepatan <1 detik dan biaya minimal $0.01.',
               },
-            ].map((step) => (
-              <div key={step.step} className="flex gap-6">
-                <div className="text-6xl font-bold text-primary-100 flex-shrink-0">
-                  {step.step}
+            ].map((step, index) => (
+              <div 
+                key={step.step} 
+                className="flex gap-6 backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 shadow-cyber-md hover:shadow-cyber-lg transition-all duration-normal"
+                style={{ background: 'rgba(255, 255, 255, 0.9)' }}
+              >
+                <div className="w-16 h-16 flex-shrink-0 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-glow-primary">
+                  <span className="text-2xl font-bold font-heading text-white">{step.step}</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-neutral-900 mb-3">
+                  <h3 className="text-2xl font-semibold font-heading text-neutral-800 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-lg text-neutral-700">{step.description}</p>
+                  <p className="text-lg text-neutral-600 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -141,15 +162,15 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* Security Proof */}
+      {/* Security Proof - Cyber Layout */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-4xl font-bold font-heading text-neutral-800 mb-6">
                 Cryptographic Guarantees
               </h2>
-              <p className="text-lg text-neutral-700 mb-6">
+              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
                 Zero Knowledge proofs memberikan mathematical certainty bahwa transaksi Anda private. Tidak ada backdoor, tidak ada trusted party.
               </p>
               <ul className="space-y-4">
@@ -160,19 +181,24 @@ export const LandingPage = () => {
                   'Nullifiers untuk preventing double-spending',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-success-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-neutral-700">{item}</span>
+                    <div className="w-6 h-6 bg-gradient-cyber-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-cyber-sm">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-neutral-600">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-primary-50 rounded-lg p-12 flex items-center justify-center">
+            <div className="backdrop-blur-xl border border-cyber-blue-200 rounded-2xl p-12 flex items-center justify-center shadow-cyber-lg"
+                 style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
               <div className="text-center">
-                <Shield className="w-32 h-32 text-primary-500 mx-auto mb-6" />
-                <div className="text-2xl font-bold text-neutral-900">
+                <div className="w-32 h-32 bg-gradient-cyber-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-glow-primary">
+                  <Shield className="w-16 h-16 text-white" />
+                </div>
+                <div className="text-2xl font-bold font-heading text-neutral-800">
                   Verified Security
                 </div>
-                <div className="text-neutral-700 mt-2">
+                <div className="text-neutral-600 mt-2">
                   Military-Grade Encryption
                 </div>
               </div>
@@ -181,13 +207,16 @@ export const LandingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-12 bg-neutral-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-neutral-900 mb-6">
+      {/* CTA Section - Cyber Gradient */}
+      <section className="relative py-24 px-6 lg:px-12 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-cyber-subtle"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyber-purple-500 rounded-full opacity-10 blur-3xl"></div>
+        
+        <div className="relative max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold font-heading text-neutral-800 mb-6">
             Siap Trading dengan Privasi Penuh?
           </h2>
-          <p className="text-xl text-neutral-700 mb-8">
+          <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
             Connect wallet Anda dan mulai transaksi private di Solana dalam hitungan detik.
           </p>
           <Button size="large" onClick={() => window.location.href = '/dashboard'}>

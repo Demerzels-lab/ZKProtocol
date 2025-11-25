@@ -17,18 +17,30 @@ export const Button = ({
   disabled,
   ...props
 }: ButtonProps) => {
-  const baseStyles = 'font-semibold rounded-md transition-all duration-base ease-out inline-flex items-center justify-center gap-2';
+  const baseStyles = 'font-semibold rounded-md transition-all duration-normal ease-cyber inline-flex items-center justify-center gap-2';
   
   const variants = {
-    primary: 'bg-primary-500 text-white hover:bg-primary-600 hover:-translate-y-0.5 hover:shadow-card-hover disabled:bg-neutral-200 disabled:text-neutral-500 disabled:cursor-not-allowed disabled:hover:translate-y-0',
-    secondary: 'bg-neutral-100 text-neutral-900 hover:bg-neutral-200 hover:-translate-y-0.5 hover:shadow-card disabled:bg-neutral-100 disabled:text-neutral-500 disabled:cursor-not-allowed',
-    outline: 'border-2 border-primary-500 text-primary-500 hover:bg-primary-50 hover:-translate-y-0.5 disabled:border-neutral-200 disabled:text-neutral-500 disabled:cursor-not-allowed',
+    primary: 
+      'bg-gradient-cyber-primary text-white shadow-cyber-md ' +
+      'hover:-translate-y-0.5 hover:shadow-glow-primary ' +
+      'active:translate-y-0 active:shadow-cyber-md ' +
+      'disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-cyber-md',
+    secondary: 
+      'bg-cyber-blue-50 text-cyber-blue-700 border border-cyber-blue-200 shadow-cyber-sm ' +
+      'hover:bg-cyber-blue-100 hover:border-cyber-blue-300 hover:-translate-y-0.5 hover:shadow-cyber-md ' +
+      'active:translate-y-0 ' +
+      'disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0',
+    outline: 
+      'border-2 border-cyber-blue-500 text-cyber-blue-600 bg-transparent ' +
+      'hover:bg-cyber-blue-50 hover:-translate-y-0.5 hover:shadow-cyber-sm ' +
+      'active:translate-y-0 ' +
+      'disabled:border-neutral-200 disabled:text-neutral-400 disabled:cursor-not-allowed disabled:hover:bg-transparent',
   };
 
   const sizes = {
-    small: 'h-12 px-4 text-sm',
-    default: 'h-14 px-6 text-base',
-    large: 'h-16 px-8 text-lg',
+    small: 'h-10 px-4 text-sm',
+    default: 'h-12 px-6 text-base',
+    large: 'h-14 px-8 text-lg',
   };
 
   return (

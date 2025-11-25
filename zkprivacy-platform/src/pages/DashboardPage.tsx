@@ -168,22 +168,25 @@ export const DashboardPage = () => {
 
   if (!connected) {
     return (
-      <div className="min-h-[80vh] flex items-center justify-center px-6">
+      <div className="min-h-[80vh] flex items-center justify-center px-6 bg-gradient-cyber-subtle">
         <div className="max-w-md w-full text-center">
-          <div className="w-24 h-24 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Shield className="w-12 h-12 text-primary-500" />
+          <div className="w-24 h-24 bg-gradient-cyber-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-glow-primary">
+            <Shield className="w-12 h-12 text-white" />
           </div>
-          <h2 className="text-3xl font-bold text-neutral-900 mb-4">
+          <h2 className="text-3xl font-bold font-heading text-neutral-800 mb-4">
             Connect Your Wallet
           </h2>
-          <p className="text-lg text-neutral-700 mb-8">
+          <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
             Mulai trading dengan privasi penuh. Connect wallet Anda untuk akses Zero Knowledge protocol di Solana Devnet.
           </p>
           <div className="flex justify-center">
-            <WalletMultiButton className="!bg-primary-500 hover:!bg-primary-600 !h-14 !px-6 !text-base !font-semibold !rounded-md" />
+            <WalletMultiButton className="!bg-gradient-cyber-primary hover:!shadow-glow-primary !h-14 !px-6 !text-base !font-semibold !rounded-md !transition-all !duration-normal" />
           </div>
           {connecting && (
-            <p className="text-sm text-neutral-500 mt-4">Connecting to wallet...</p>
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="w-4 h-4 bg-cyber-blue-500 rounded-full animate-pulse-glow"></div>
+              <p className="text-sm text-neutral-600">Connecting to wallet...</p>
+            </div>
           )}
           <p className="text-sm text-neutral-500 mt-4">
             Devnet mode: Connect Phantom, Solflare, atau wallet lain yang support Solana
@@ -194,61 +197,71 @@ export const DashboardPage = () => {
   }
 
   return (
-    <div className="min-h-screen py-8 px-6 lg:px-12">
+    <div className="min-h-screen py-8 px-6 lg:px-12 bg-neutral-50">
       <div className="max-w-7xl mx-auto">
-        {/* Wallet Header */}
-        <div className="bg-white rounded-lg border border-neutral-200 shadow-card p-6 mb-8">
+        {/* Wallet Header - Glassmorphism */}
+        <div className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg shadow-cyber-md p-6 mb-8"
+             style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary-50 rounded-full flex items-center justify-center">
-                <Shield className="w-6 h-6 text-primary-500" />
+              <div className="w-12 h-12 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-cyber-md">
+                <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
                 <div className="text-sm text-neutral-500">Connected Wallet</div>
-                <div className="font-mono text-lg font-semibold text-neutral-900">
+                <div className="font-mono text-lg font-semibold text-neutral-800">
                   {truncateAddress(publicKey?.toString() || '')}
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="px-3 py-1 bg-success-50 text-success-500 rounded-full text-sm font-medium flex items-center gap-2">
-                <div className="w-2 h-2 bg-success-500 rounded-full"></div>
+              <div className="px-3 py-1.5 bg-cyber-cyan-400 bg-opacity-10 text-cyber-cyan-500 border border-cyber-cyan-200 rounded-full text-sm font-medium flex items-center gap-2">
+                <div className="w-2 h-2 bg-cyber-cyan-500 rounded-full animate-pulse-glow"></div>
                 Solana Devnet
               </div>
-              <WalletMultiButton className="!bg-neutral-100 hover:!bg-neutral-200 !text-neutral-900 !h-10 !px-4 !text-sm !font-medium !rounded-md" />
+              <WalletMultiButton className="!bg-neutral-100 hover:!bg-neutral-200 !text-neutral-800 !h-10 !px-4 !text-sm !font-medium !rounded-md !border !border-neutral-200" />
             </div>
           </div>
         </div>
 
-        {/* Real-time SOL Price */}
+        {/* Real-time SOL Price - Cyber Banner */}
         {solPrice > 0 && (
-          <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 mb-8">
+          <div className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-4 mb-8 shadow-cyber-sm"
+               style={{ background: 'rgba(239, 246, 255, 0.8)' }}>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-primary-600" />
-                <span className="text-sm font-medium text-primary-900">Live from Jupiter Aggregator:</span>
+                <div className="w-8 h-8 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-cyber-sm">
+                  <TrendingUp className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-sm font-medium text-cyber-blue-700">Live from Jupiter Aggregator:</span>
               </div>
-              <div className="text-lg font-bold text-primary-600">
+              <div className="text-lg font-bold font-heading text-cyber-blue-600">
                 1 SOL = ${solPrice.toFixed(2)} USD
               </div>
             </div>
           </div>
         )}
 
-        {/* Quick Stats */}
+        {/* Quick Stats - Cyber Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
-            { label: 'Wallet Balance', value: `${balance.toFixed(4)} SOL`, subValue: `$${balanceInUsd}`, icon: Plus, color: 'primary' },
-            { label: 'Total Transactions', value: onChainTxs.length.toString(), subValue: 'On-chain', icon: Activity, color: 'primary' },
-            { label: 'Privacy Score', value: `${stats?.privacyScore || 100}%`, subValue: 'Private mode', icon: Shield, color: 'success' },
-            { label: 'Network', value: 'Devnet', subValue: 'Solana', icon: Zap, color: 'warning' },
+            { label: 'Wallet Balance', value: `${balance.toFixed(4)} SOL`, subValue: `$${balanceInUsd}`, icon: Plus, gradient: 'cyber-blue' },
+            { label: 'Total Transactions', value: onChainTxs.length.toString(), subValue: 'On-chain', icon: Activity, gradient: 'cyber-purple' },
+            { label: 'Privacy Score', value: `${stats?.privacyScore || 100}%`, subValue: 'Private mode', icon: Shield, gradient: 'cyber-cyan' },
+            { label: 'Network', value: 'Devnet', subValue: 'Solana', icon: Zap, gradient: 'cyber-blue' },
           ].map((stat) => (
-            <div key={stat.label} className="bg-white p-6 rounded-lg border border-neutral-200 shadow-card">
+            <div 
+              key={stat.label} 
+              className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-6 shadow-cyber-md hover:shadow-cyber-lg hover:-translate-y-1 transition-all duration-normal"
+              style={{ background: 'rgba(255, 255, 255, 0.9)' }}
+            >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-neutral-500">{stat.label}</span>
-                <stat.icon className={`w-5 h-5 text-${stat.color}-500`} />
+                <div className="w-8 h-8 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-cyber-sm">
+                  <stat.icon className="w-4 h-4 text-white" />
+                </div>
               </div>
-              <div className="text-2xl font-bold text-neutral-900">{stat.value}</div>
+              <div className="text-2xl font-bold font-heading text-neutral-800">{stat.value}</div>
               {stat.subValue && (
                 <div className="text-xs text-neutral-500 mt-1">{stat.subValue}</div>
               )}
@@ -257,15 +270,16 @@ export const DashboardPage = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Transaction Actions */}
+          {/* Transaction Actions - Glassmorphism */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-lg border border-neutral-200 shadow-card p-8">
-              <h3 className="text-2xl font-bold text-neutral-900 mb-6">
+            <div className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg shadow-cyber-md p-8"
+                 style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+              <h3 className="text-2xl font-bold font-heading text-neutral-800 mb-6">
                 Private Transaction
               </h3>
 
-              {/* Tabs */}
-              <div className="flex gap-2 mb-6 border-b border-neutral-200">
+              {/* Tabs - Cyber Style */}
+              <div className="flex gap-2 mb-6 border-b border-cyber-blue-100">
                 {[
                   { id: 'deposit', label: 'Deposit', icon: ArrowDown },
                   { id: 'withdraw', label: 'Withdraw', icon: ArrowUp },
@@ -274,10 +288,10 @@ export const DashboardPage = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id as any)}
-                    className={`flex items-center gap-2 px-4 py-3 border-b-2 transition-colors ${
+                    className={`flex items-center gap-2 px-4 py-3 border-b-2 transition-all duration-normal ${
                       activeTab === tab.id
-                        ? 'border-primary-500 text-primary-600'
-                        : 'border-transparent text-neutral-500 hover:text-neutral-700'
+                        ? 'border-cyber-blue-500 text-cyber-blue-600'
+                        : 'border-transparent text-neutral-500 hover:text-cyber-blue-600'
                     }`}
                   >
                     <tab.icon className="w-4 h-4" />
@@ -297,7 +311,8 @@ export const DashboardPage = () => {
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     placeholder="0.00"
-                    className="w-full h-14 px-4 border border-neutral-200 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
+                    className="w-full h-14 px-4 border-2 border-cyber-blue-200 rounded-md focus:outline-none focus:border-cyber-blue-500 focus:shadow-glow-primary transition-all duration-normal text-lg bg-white"
+                    style={{ transition: 'all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1)' }}
                     step="0.01"
                     min="0"
                   />
@@ -308,10 +323,11 @@ export const DashboardPage = () => {
                   )}
                 </div>
 
-                <div className="bg-primary-50 p-4 rounded-md">
+                <div className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-4"
+                     style={{ background: 'rgba(239, 246, 255, 0.8)' }}>
                   <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                    <div className="text-sm text-primary-900">
+                    <Shield className="w-5 h-5 text-cyber-blue-600 flex-shrink-0 mt-0.5" />
+                    <div className="text-sm text-cyber-blue-700">
                       <div className="font-semibold mb-1">Real Blockchain Transaction</div>
                       <div>Transaction akan dieksekusi di Solana Devnet. {activeTab === 'deposit' ? 'SOL akan dikirim ke treasury address.' : activeTab === 'withdraw' ? 'SOL akan kembali ke wallet Anda.' : 'Trade simulation via Jupiter aggregator.'}</div>
                     </div>
@@ -331,42 +347,47 @@ export const DashboardPage = () => {
             </div>
           </div>
 
-          {/* Balance Card */}
+          {/* Balance Card - Cyber Gradient */}
           <div>
-            <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg shadow-card-hover p-8 text-white mb-6">
-              <div className="text-sm opacity-90 mb-2">Real-time Balance</div>
-              <div className="text-4xl font-bold mb-1">{balance.toFixed(4)}</div>
-              <div className="text-sm opacity-75">SOL (${balanceInUsd})</div>
+            <div className="bg-gradient-cyber-primary rounded-lg shadow-glow-primary p-8 text-white mb-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-8 -mt-8"></div>
+              <div className="relative">
+                <div className="text-sm opacity-90 mb-2">Real-time Balance</div>
+                <div className="text-4xl font-bold font-heading mb-1">{balance.toFixed(4)}</div>
+                <div className="text-sm opacity-75">SOL (${balanceInUsd})</div>
+              </div>
             </div>
 
-            <div className="bg-white rounded-lg border border-neutral-200 shadow-card p-6">
-              <h4 className="text-lg font-semibold text-neutral-900 mb-4">
+            <div className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg shadow-cyber-md p-6"
+                 style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+              <h4 className="text-lg font-semibold font-heading text-neutral-800 mb-4">
                 Network Status
               </h4>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-700">Connection</span>
-                  <span className="px-2 py-1 bg-success-50 text-success-600 rounded text-xs font-medium">
+                  <span className="text-sm text-neutral-600">Connection</span>
+                  <span className="px-2 py-1 bg-cyber-cyan-400 bg-opacity-10 text-cyber-cyan-600 border border-cyber-cyan-200 rounded text-xs font-medium">
                     Active
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-700">Network</span>
-                  <span className="text-sm font-semibold text-neutral-900">Devnet</span>
+                  <span className="text-sm text-neutral-600">Network</span>
+                  <span className="text-sm font-semibold text-neutral-800">Devnet</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-700">Wallet</span>
-                  <span className="text-sm font-semibold text-neutral-900">Connected</span>
+                  <span className="text-sm text-neutral-600">Wallet</span>
+                  <span className="text-sm font-semibold text-neutral-800">Connected</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* On-chain Transaction History */}
+        {/* On-chain Transaction History - Cyber Cards */}
         {onChainTxs.length > 0 && (
-          <div className="mt-8 bg-white rounded-lg border border-neutral-200 shadow-card p-8">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-6">
+          <div className="mt-8 backdrop-blur-xl border border-cyber-blue-200 rounded-lg shadow-cyber-md p-8"
+               style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+            <h3 className="text-2xl font-bold font-heading text-neutral-800 mb-6">
               Recent On-Chain Transactions
             </h3>
 
@@ -374,29 +395,30 @@ export const DashboardPage = () => {
               {onChainTxs.slice(0, 5).map((tx) => (
                 <div
                   key={tx.signature}
-                  className="flex items-center justify-between p-4 border border-neutral-200 rounded-lg hover:shadow-card transition-shadow"
+                  className="flex items-center justify-between p-4 border border-cyber-blue-200 rounded-lg hover:shadow-cyber-md hover:-translate-y-0.5 transition-all duration-normal"
+                  style={{ background: 'rgba(255, 255, 255, 0.5)' }}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 bg-primary-50 rounded-full flex items-center justify-center">
-                      <Activity className="w-5 h-5 text-primary-500" />
+                    <div className="w-10 h-10 bg-gradient-cyber-primary rounded-lg flex items-center justify-center shadow-cyber-sm">
+                      <Activity className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <div className="font-semibold text-neutral-900">Transaction</div>
+                      <div className="font-semibold text-neutral-800">Transaction</div>
                       <div className="text-sm text-neutral-500 font-mono">
                         {truncateAddress(tx.signature)}
                       </div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm text-neutral-700">
+                    <div className="text-sm text-neutral-600">
                       {tx.blockTime ? new Date(tx.blockTime * 1000).toLocaleString() : 'Pending'}
                     </div>
                     {tx.err ? (
-                      <span className="px-2 py-1 bg-error-50 text-error-600 rounded text-xs font-medium">
+                      <span className="px-2 py-1 bg-error-500 bg-opacity-10 text-error-500 border border-error-200 rounded text-xs font-medium">
                         Failed
                       </span>
                     ) : (
-                      <span className="px-2 py-1 bg-success-50 text-success-600 rounded text-xs font-medium flex items-center gap-1">
+                      <span className="px-2 py-1 bg-cyber-cyan-400 bg-opacity-10 text-cyber-cyan-600 border border-cyber-cyan-200 rounded text-xs font-medium flex items-center gap-1">
                         <CheckCircle className="w-3 h-3" />
                         Confirmed
                       </span>

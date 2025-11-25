@@ -17,13 +17,18 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-neutral-200 backdrop-blur-lg bg-white/90">
+    <nav className="sticky top-0 z-50 backdrop-blur-xl border-b border-cyber-blue-100" 
+         style={{ 
+           background: 'rgba(250, 250, 250, 0.95)',
+         }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-[72px]">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <Shield className="w-9 h-9 text-primary-500" />
-            <span className="text-xl font-bold text-neutral-900">ZK Privacy</span>
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="p-1.5 rounded-lg bg-gradient-cyber-primary shadow-cyber-md group-hover:shadow-glow-primary transition-all duration-normal">
+              <Shield className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-xl font-bold font-heading text-neutral-800">Erebus Protocol</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,13 +37,16 @@ export const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-base font-medium transition-colors duration-200 ${
+                className={`text-base font-medium transition-all duration-normal relative ${
                   isActive(link.path)
-                    ? 'text-primary-600 border-b-2 border-primary-600 pb-1'
-                    : 'text-neutral-700 hover:text-primary-500'
+                    ? 'text-cyber-blue-600'
+                    : 'text-neutral-600 hover:text-cyber-blue-600'
                 }`}
               >
                 {link.label}
+                {isActive(link.path) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-cyber-primary rounded-full"></span>
+                )}
               </Link>
             ))}
           </div>
@@ -53,7 +61,7 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-neutral-700"
+            className="md:hidden p-2 text-neutral-600 hover:text-cyber-blue-600 transition-colors"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -61,17 +69,18 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-200">
+          <div className="md:hidden py-4 border-t border-cyber-blue-100 backdrop-blur-xl" 
+               style={{ background: 'rgba(250, 250, 250, 0.98)' }}>
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-base font-medium py-2 ${
+                  className={`text-base font-medium py-2 transition-colors ${
                     isActive(link.path)
-                      ? 'text-primary-600'
-                      : 'text-neutral-700'
+                      ? 'text-cyber-blue-600'
+                      : 'text-neutral-600 hover:text-cyber-blue-600'
                   }`}
                 >
                   {link.label}
