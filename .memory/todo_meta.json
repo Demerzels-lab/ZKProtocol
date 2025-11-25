@@ -5,14 +5,14 @@
         "id": "1",
         "content": "Research & Technical Planning untuk Blockchain Integration",
         "details": "1. Research Solana wallet integration (Phantom, Solflare)\n2. Study Erebus Protocol's API endpoints dan SDK usage\n3. Plan blockchain transaction flow (private deposits/transfers)\n4. Research Jupiter Aggregator integration\n5. Define technical architecture untuk privacy features",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
         "content": "Design System & UI/UX Professional",
         "details": "1. Buat design system berdasarkan Erebus Protocol\n2. Design landing page dengan privacy/blockchain theming\n3. Design dashboard interface untuk users\n4. Design wallet connection UI\n5. Create responsive design untuk semua devices",
-        "status": "pending",
+        "status": "in_progress",
         "priority": "high"
       },
       "3": {
