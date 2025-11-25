@@ -30,16 +30,16 @@ export const LandingPage = () => {
           </h1>
           
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Transaksi private dengan kecepatan lightning-fast menggunakan ZK-SNARKs dan Pedersen commitments. Privasi penuh tanpa KYC.
+            Private transactions with lightning-fast speed using ZK-SNARKs and Pedersen commitments. Complete privacy without KYC.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="large" onClick={() => window.location.href = '/dashboard'}>
-              Mulai Trading Private
+              Start Private Trading
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="outline" size="large" onClick={() => window.location.href = '/technology'}>
-              Pelajari Teknologi
+              Learn Technology
             </Button>
           </div>
         </div>
@@ -75,27 +75,27 @@ export const LandingPage = () => {
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold font-heading text-center text-neutral-800 mb-4">
-            Fitur Privasi Terdepan
+            Leading Privacy Features
           </h2>
           <p className="text-xl text-center text-neutral-600 mb-16 max-w-2xl mx-auto">
-            Platform komprehensif untuk transaksi private di Solana ecosystem
+            Comprehensive platform for private transactions on Solana ecosystem
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: 'Private Deposits',
-                description: 'Simpan aset dengan Zero Knowledge proofs. Tidak ada yang bisa tracking deposit Anda di on-chain.',
+                description: 'Store assets with Zero Knowledge proofs. No one can track your on-chain deposits.',
                 icon: Lock,
               },
               {
                 title: 'Private Trading',
-                description: 'Trading token dengan privasi penuh. Strategi trading Anda tetap rahasia dengan ZK-SNARKs.',
+                description: 'Trade tokens with complete privacy. Your trading strategy stays confidential with ZK-SNARKs.',
                 icon: Eye,
               },
               {
                 title: 'Cross-Chain Bridge',
-                description: 'Bridge aset private antara Ethereum dan Solana dengan security berlapis dan privasi terjamin.',
+                description: 'Bridge private assets between Ethereum and Solana with layered security and guaranteed privacy.',
                 icon: ArrowRight,
               },
             ].map((feature) => (
@@ -121,7 +121,7 @@ export const LandingPage = () => {
       <section className="py-24 px-6 lg:px-12 bg-gradient-cyber-subtle">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold font-heading text-center text-neutral-800 mb-16">
-            Bagaimana Cara Kerjanya
+            How It Works
           </h2>
 
           <div className="space-y-8">
@@ -129,17 +129,17 @@ export const LandingPage = () => {
               {
                 step: '01',
                 title: 'Generate ZK Proof',
-                description: 'Sistem generate Zero Knowledge proof untuk transaksi Anda menggunakan ZK-SNARKs. Proof membuktikan validitas tanpa reveal data.',
+                description: 'System generates Zero Knowledge proof for your transaction using ZK-SNARKs. Proof validates without revealing data.',
               },
               {
                 step: '02',
                 title: 'Pedersen Commitment',
-                description: 'Transaction data di-encrypt dengan Pedersen commitments, memberikan privasi matematis yang tidak bisa di-break.',
+                description: 'Transaction data is encrypted with Pedersen commitments, providing mathematical privacy that cannot be broken.',
               },
               {
                 step: '03',
                 title: 'Solana Finalization',
-                description: 'Transaksi private di-finalize di Solana blockchain dengan kecepatan <1 detik dan biaya minimal $0.01.',
+                description: 'Private transaction finalizes on Solana blockchain with <1 second speed and minimal $0.01 fee.',
               },
             ].map((step, index) => (
               <div 
@@ -171,14 +171,14 @@ export const LandingPage = () => {
                 Cryptographic Guarantees
               </h2>
               <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                Zero Knowledge proofs memberikan mathematical certainty bahwa transaksi Anda private. Tidak ada backdoor, tidak ada trusted party.
+                Zero Knowledge proofs provide mathematical certainty that your transactions are private. No backdoors, no trusted parties.
               </p>
               <ul className="space-y-4">
                 {[
-                  'ZK-SNARKs untuk proof generation',
-                  'Pedersen commitments untuk hiding values',
-                  'Range proofs untuk preventing overflow',
-                  'Nullifiers untuk preventing double-spending',
+                  'ZK-SNARKs for proof generation',
+                  'Pedersen commitments for hiding values',
+                  'Range proofs for preventing overflow',
+                  'Nullifiers for preventing double-spending',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-gradient-cyber-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-cyber-sm">
@@ -214,13 +214,13 @@ export const LandingPage = () => {
         
         <div className="relative max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold font-heading text-neutral-800 mb-6">
-            Siap Trading dengan Privasi Penuh?
+            Ready to Trade with Complete Privacy?
           </h2>
           <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-            Connect wallet Anda dan mulai transaksi private di Solana dalam hitungan detik.
+            Connect your wallet and start private transactions on Solana in seconds.
           </p>
           <Button size="large" onClick={() => window.location.href = '/dashboard'}>
-            Connect Wallet Sekarang
+            Connect Wallet Now
             <ArrowRight className="w-5 h-5" />
           </Button>
         </div>

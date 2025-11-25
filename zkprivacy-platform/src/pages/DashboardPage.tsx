@@ -126,7 +126,7 @@ export const DashboardPage = () => {
         await loadWalletData();
 
         setAmount('');
-        alert(`Transaction berhasil! Signature: ${signature.substring(0, 8)}...`);
+        alert(`Transaction successful! Signature: ${signature.substring(0, 8)}...`);
       } else {
         // Trade simulation (would integrate with Jupiter swap in production)
         if (userId) {
@@ -134,11 +134,11 @@ export const DashboardPage = () => {
           await loadDashboardData(userId);
         }
         setAmount('');
-        alert('Trade simulation berhasil!');
+        alert('Trade simulation successful!');
       }
     } catch (error: any) {
       console.error('Transaction failed:', error);
-      alert(`Transaction gagal: ${error.message || 'Unknown error'}`);
+      alert(`Transaction failed: ${error.message || 'Unknown error'}`);
     } finally {
       setIsProcessing(false);
     }
@@ -177,7 +177,7 @@ export const DashboardPage = () => {
             Connect Your Wallet
           </h2>
           <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
-            Mulai trading dengan privasi penuh. Connect wallet Anda untuk akses Zero Knowledge protocol di Solana Devnet.
+            Start trading with complete privacy. Connect your wallet to access Zero Knowledge protocol on Solana Devnet.
           </p>
           <div className="flex justify-center">
             <WalletMultiButton className="!bg-gradient-cyber-primary hover:!shadow-glow-primary !h-14 !px-6 !text-base !font-semibold !rounded-md !transition-all !duration-normal" />
@@ -189,7 +189,7 @@ export const DashboardPage = () => {
             </div>
           )}
           <p className="text-sm text-neutral-500 mt-4">
-            Devnet mode: Connect Phantom, Solflare, atau wallet lain yang support Solana
+            Devnet mode: Connect Phantom, Solflare, or other Solana-compatible wallets
           </p>
         </div>
       </div>
@@ -329,7 +329,7 @@ export const DashboardPage = () => {
                     <Shield className="w-5 h-5 text-cyber-blue-600 flex-shrink-0 mt-0.5" />
                     <div className="text-sm text-cyber-blue-700">
                       <div className="font-semibold mb-1">Real Blockchain Transaction</div>
-                      <div>Transaction akan dieksekusi di Solana Devnet. {activeTab === 'deposit' ? 'SOL akan dikirim ke treasury address.' : activeTab === 'withdraw' ? 'SOL akan kembali ke wallet Anda.' : 'Trade simulation via Jupiter aggregator.'}</div>
+                      <div>Transaction will execute on Solana Devnet. {activeTab === 'deposit' ? 'SOL will be sent to treasury address.' : activeTab === 'withdraw' ? 'SOL will return to your wallet.' : 'Trade simulation via Jupiter aggregator.'}</div>
                     </div>
                   </div>
                 </div>

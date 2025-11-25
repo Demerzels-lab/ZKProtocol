@@ -2,15 +2,16 @@ import { Shield, Target, Users, Calendar, Github, Twitter, MessageCircle } from 
 
 export const AboutPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-neutral-50">
       {/* Page Header */}
-      <section className="bg-neutral-50 py-16 px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-neutral-900 mb-4">
+      <section className="relative py-16 px-6 lg:px-12 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-cyber-subtle"></div>
+        <div className="relative max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl font-bold font-heading text-neutral-800 mb-4">
             Privacy is a Right
           </h1>
-          <p className="text-xl text-neutral-700">
-            Kami percaya bahwa setiap orang berhak atas privasi finansial tanpa kompromi
+          <p className="text-xl text-neutral-600">
+            We believe that everyone deserves financial privacy without compromise
           </p>
         </div>
       </section>
@@ -19,33 +20,35 @@ export const AboutPage = () => {
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-start gap-6 mb-8">
-            <div className="w-16 h-16 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Target className="w-8 h-8 text-primary-500" />
+            <div className="w-16 h-16 bg-gradient-cyber-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-cyber-md">
+              <Target className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-4">
+              <h2 className="text-3xl font-bold font-heading text-neutral-800 mb-4">
                 Our Mission
               </h2>
-              <p className="text-lg text-neutral-700 mb-4">
-                Kami membangun infrastruktur privasi untuk DeFi yang memungkinkan siapa saja bertransaksi dengan privasi penuh, tanpa memerlukan trust kepada pihak ketiga atau melanggar compliance.
+              <p className="text-lg text-neutral-600 mb-4 leading-relaxed">
+                We are building privacy infrastructure for DeFi that enables anyone to transact with complete privacy, without requiring trust in third parties or violating compliance requirements.
               </p>
-              <p className="text-lg text-neutral-700">
-                Zero Knowledge technology adalah masa depan privasi blockchain. Dengan mathematical guarantees dan cryptographic security, kami memberikan privasi yang benar-benar tidak bisa di-break.
+              <p className="text-lg text-neutral-600 leading-relaxed">
+                Zero Knowledge technology is the future of blockchain privacy. With mathematical guarantees and cryptographic security, we deliver privacy that truly cannot be broken.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             {[
-              { title: 'Privacy First', description: 'Privasi adalah default, bukan optional feature' },
-              { title: 'Trustless', description: 'Tidak ada trusted party atau backdoor' },
-              { title: 'Open Source', description: 'Transparent code untuk community verification' },
+              { title: 'Privacy First', description: 'Privacy is the default, not an optional feature' },
+              { title: 'Trustless', description: 'No trusted parties or backdoors' },
+              { title: 'Open Source', description: 'Transparent code for community verification' },
             ].map((value) => (
-              <div key={value.title} className="bg-neutral-50 p-6 rounded-lg border border-neutral-200">
-                <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+              <div key={value.title} 
+                   className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-6 shadow-cyber-md hover:shadow-cyber-lg transition-all duration-normal"
+                   style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+                <h3 className="text-xl font-semibold font-heading text-neutral-800 mb-2">
                   {value.title}
                 </h3>
-                <p className="text-neutral-700">{value.description}</p>
+                <p className="text-neutral-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -53,14 +56,15 @@ export const AboutPage = () => {
       </section>
 
       {/* Roadmap */}
-      <section className="py-24 px-6 lg:px-12 bg-neutral-50">
+      <section className="py-24 px-6 lg:px-12 bg-gradient-cyber-subtle">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 rounded-full text-primary-600 text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-cyber-blue-700 text-sm font-medium mb-4 backdrop-blur-xl border border-cyber-blue-200"
+                 style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
               <Calendar className="w-4 h-4" />
               Development Roadmap
             </div>
-            <h2 className="text-4xl font-bold text-neutral-900">
+            <h2 className="text-4xl font-bold font-heading text-neutral-800">
               Platform Evolution
             </h2>
           </div>
@@ -71,16 +75,16 @@ export const AboutPage = () => {
                 quarter: 'Q1 2025',
                 status: 'Completed',
                 items: [
-                  'ZK-SNARK implementation untuk Solana',
+                  'ZK-SNARK implementation for Solana',
                   'Basic private transfer functionality',
-                  'Devnet testing dan security audit',
+                  'Devnet testing and security audit',
                 ],
               },
               {
                 quarter: 'Q2 2025',
                 status: 'In Progress',
                 items: [
-                  'Jupiter Aggregator integration untuk private swaps',
+                  'Jupiter Aggregator integration for private swaps',
                   'Cross-chain bridge (Ethereum ↔ Solana)',
                   'Mobile wallet support',
                 ],
@@ -104,16 +108,18 @@ export const AboutPage = () => {
                 ],
               },
             ].map((phase) => (
-              <div key={phase.quarter} className="bg-white rounded-lg border border-neutral-200 shadow-card p-8">
+              <div key={phase.quarter} 
+                   className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg shadow-cyber-md p-8 hover:shadow-cyber-lg transition-all duration-normal"
+                   style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-neutral-900">{phase.quarter}</h3>
+                  <h3 className="text-2xl font-bold font-heading text-neutral-800">{phase.quarter}</h3>
                   <span
-                    className={`px-4 py-2 rounded-full text-sm font-medium ${
+                    className={`px-4 py-2 rounded-full text-sm font-medium border ${
                       phase.status === 'Completed'
-                        ? 'bg-success-50 text-success-600'
+                        ? 'bg-cyber-cyan-400 bg-opacity-10 text-cyber-cyan-600 border-cyber-cyan-200'
                         : phase.status === 'In Progress'
-                        ? 'bg-warning-50 text-warning-600'
-                        : 'bg-neutral-100 text-neutral-600'
+                        ? 'bg-warning-500 bg-opacity-10 text-warning-600 border-warning-200'
+                        : 'bg-neutral-100 text-neutral-600 border-neutral-200'
                     }`}
                   >
                     {phase.status}
@@ -122,8 +128,10 @@ export const AboutPage = () => {
                 <ul className="space-y-3">
                   {phase.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <Shield className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">{item}</span>
+                      <div className="w-5 h-5 bg-gradient-cyber-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-cyber-sm">
+                        <Shield className="w-3 h-3 text-white" />
+                      </div>
+                      <span className="text-neutral-600">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -136,11 +144,11 @@ export const AboutPage = () => {
       {/* Partnerships */}
       <section className="py-24 px-6 lg:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-neutral-900 mb-4">
+          <h2 className="text-4xl font-bold font-heading text-center text-neutral-800 mb-4">
             Partnerships & Ecosystem
           </h2>
-          <p className="text-xl text-center text-neutral-700 mb-16 max-w-2xl mx-auto">
-            Bekerja sama dengan ecosystem leaders untuk membangun privasi yang lebih baik
+          <p className="text-xl text-center text-neutral-600 mb-16 max-w-2xl mx-auto">
+            Collaborating with ecosystem leaders to build better privacy
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -152,7 +160,7 @@ export const AboutPage = () => {
               },
               {
                 name: 'Jupiter Aggregator',
-                description: 'DEX aggregation untuk private swaps',
+                description: 'DEX aggregation for private swaps',
                 type: 'DeFi',
               },
               {
@@ -161,15 +169,17 @@ export const AboutPage = () => {
                 type: 'Security',
               },
             ].map((partner) => (
-              <div key={partner.name} className="bg-neutral-50 p-8 rounded-lg border border-neutral-200 text-center">
-                <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-10 h-10 text-primary-500" />
+              <div key={partner.name} 
+                   className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 text-center shadow-cyber-md hover:shadow-cyber-lg hover:-translate-y-1 transition-all duration-normal"
+                   style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+                <div className="w-20 h-20 bg-gradient-cyber-subtle rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-blue-100">
+                  <Users className="w-10 h-10 text-cyber-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+                <h3 className="text-xl font-semibold font-heading text-neutral-800 mb-2">
                   {partner.name}
                 </h3>
-                <p className="text-neutral-700 mb-3">{partner.description}</p>
-                <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium">
+                <p className="text-neutral-600 mb-3 leading-relaxed">{partner.description}</p>
+                <span className="inline-block px-3 py-1 bg-cyber-blue-400 bg-opacity-10 text-cyber-blue-600 border border-cyber-blue-200 rounded-full text-sm font-medium">
                   {partner.type}
                 </span>
               </div>
@@ -179,14 +189,15 @@ export const AboutPage = () => {
       </section>
 
       {/* Community */}
-      <section className="py-24 px-6 lg:px-12 bg-primary-50">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative py-24 px-6 lg:px-12 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-cyber-subtle"></div>
+        <div className="relative max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-4xl font-bold font-heading text-neutral-800 mb-4">
               Join Our Community
             </h2>
-            <p className="text-xl text-neutral-700">
-              Connect dengan privacy advocates dan developers di seluruh dunia
+            <p className="text-xl text-neutral-600">
+              Connect with privacy advocates and developers worldwide
             </p>
           </div>
 
@@ -214,24 +225,25 @@ export const AboutPage = () => {
               <a
                 key={social.platform}
                 href={social.link}
-                className="bg-white p-8 rounded-lg border border-neutral-200 shadow-card hover:shadow-card-hover transition-all hover:-translate-y-1 text-center group"
+                className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 text-center shadow-cyber-md hover:shadow-cyber-lg hover:-translate-y-1 transition-all duration-normal group"
+                style={{ background: 'rgba(255, 255, 255, 0.9)' }}
               >
-                <social.icon className="w-12 h-12 text-primary-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+                <social.icon className="w-12 h-12 text-cyber-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-semibold font-heading text-neutral-800 mb-2">
                   {social.platform}
                 </h3>
-                <p className="text-neutral-700">{social.members}</p>
+                <p className="text-neutral-600">{social.members}</p>
               </a>
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-neutral-700 mb-4">
-              Punya pertanyaan atau ingin collaborate?
+            <p className="text-neutral-600 mb-4">
+              Have questions or want to collaborate?
             </p>
             <a
               href="mailto:hello@zkprivacy.io"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white rounded-md font-semibold hover:bg-primary-600 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-cyber-primary text-white rounded-md font-semibold shadow-cyber-md hover:shadow-glow-primary transition-all duration-normal"
             >
               Contact Us
             </a>
