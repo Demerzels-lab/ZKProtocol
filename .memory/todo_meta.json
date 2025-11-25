@@ -12,21 +12,21 @@
         "id": "2",
         "content": "Design System & UI/UX Professional",
         "details": "1. Buat design system berdasarkan Erebus Protocol\n2. Design landing page dengan privacy/blockchain theming\n3. Design dashboard interface untuk users\n4. Design wallet connection UI\n5. Create responsive design untuk semua devices",
-        "status": "in_progress",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
         "content": "Development Fullstack Platform",
         "details": "1. Setup React/Next.js frontend dengan wallet integration\n2. Implement blockchain wallet connection (Phantom, Solflare)\n3. Build backend API untuk blockchain interactions\n4. Implement privacy transaction features (mock/simulation)\n5. Integrate Jupiter Aggregator untuk token swapping\n6. Build dashboard dengan real-time data\n7. Setup Supabase untuk user management",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
         "content": "Testing & Deployment",
         "details": "1. Test wallet integration di testnet/devnet\n2. Test blockchain transactions dengan small amounts\n3. Security testing untuk wallet connections\n4. Performance optimization\n5. Deploy to production environment",
-        "status": "pending",
+        "status": "completed",
         "priority": "medium"
       }
     }
