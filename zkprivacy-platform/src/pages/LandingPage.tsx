@@ -22,15 +22,13 @@ export const LandingPage = () => {
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-bold font-heading text-neutral-800 mb-6 leading-tight">
-            True Privacy on Solana
-            <br />
-            <span className="bg-gradient-cyber-primary bg-clip-text text-transparent">
-              ZKProtocol
-            </span>
+            THE ZERO-KNOWLEDGE PRIVACY NETWORK
           </h1>
           
           <p className="text-xl text-neutral-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Private transactions with lightning-fast speed using ZK-SNARKs and Pedersen commitments. Complete privacy without KYC.
+            Execute private on-chain transactions using zero-knowledge technology
+            <br />
+            Keep your identity and balances hidden while staying fully verifiable
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
