@@ -1,26 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+:root {
+  --bg-start: #CBE0FF;
+  --bg-end: #F0E1FE;
+  --pixel-border: #5016CA;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+  background-attachment: fixed;
+  color: var(--pixel-border);
+  -webkit-font-smoothing: none;
+  min-height: 100vh;
+}
+
+@layer components {
+  /* UPDATED: Glassmorphic Pixel Card */
+  /* Combines hard retro borders with modern transparency */
+  .pixel-card {
+    @apply bg-white/90 backdrop-blur-sm border-2 border-brand-dark shadow-[4px_4px_0px_0px_#5016CA];
   }
   
-  body {
-    @apply font-sans text-neutral-800 bg-neutral-50 antialiased;
+  .pixel-btn-primary {
+    @apply bg-primary-500 text-white border-2 border-brand-dark shadow-[4px_4px_0px_0px_#5016CA] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all uppercase tracking-widest text-xl;
   }
 
-  * {
-    @apply transition-none;
+  .pixel-btn-secondary {
+    @apply bg-white text-primary-500 border-2 border-brand-dark shadow-[4px_4px_0px_0px_#5016CA] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all uppercase tracking-widest text-xl hover:bg-primary-50;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #CBE0FF;
+  border-left: 2px solid #5016CA;
+}
+::-webkit-scrollbar-thumb {
+  background: #7922ED;
+  border: 2px solid #5016CA;
+  box-shadow: inset -2px -2px 0px 0px rgba(0,0,0,0.2);
 }

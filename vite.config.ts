@@ -39,6 +39,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['@solana/web3.js', '@solana/wallet-adapter-base', '@solana/wallet-adapter-react'],
+    exclude: ['@fractalwagmi/solana-wallet-adapter'],
     esbuildOptions: {
       target: 'esnext',
       define: {
