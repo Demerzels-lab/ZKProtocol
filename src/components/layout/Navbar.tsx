@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, Menu, X, LogOut, Wallet } from 'lucide-react';
+import { Menu, X, LogOut, Wallet } from 'lucide-react';
 import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { Button } from '../ui/Button';
@@ -32,8 +32,12 @@ export const Navbar = () => {
           
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-primary-500 border-2 border-brand-dark flex items-center justify-center shadow-sm group-hover:shadow-DEFAULT transition-all">
-              <Shield className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 border-2 border-brand-dark overflow-hidden shadow-sm group-hover:shadow-DEFAULT transition-all">
+              <img 
+                src="/logo.jpeg" 
+                alt="ZKProtocol Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-xl font-bold font-display text-brand-dark tracking-tight mt-1">
               ZKProtocol
