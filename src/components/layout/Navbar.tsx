@@ -1,11 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, LogOut, Wallet } from 'lucide-react';
 import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { Button } from '../ui/Button';
 
 export const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   // Wallet Hook
@@ -87,9 +89,11 @@ export const Navbar = () => {
                 </Button>
               </div>
             ) : (
-              <Button onClick={() => window.location.href = '/dashboard'}>
-                Connect Wallet
-              </Button>
+              <div className="pixel-btn bg-primary-500 text-white">
+                <WalletMultiButton style={{ background: 'transparent', height: 'auto', padding: '12px 24px', fontFamily: 'inherit', fontSize: '16px', fontWeight: 'bold' }}>
+                  Connect Wallet
+                </WalletMultiButton>
+              </div>
             )}
           </div>
 
@@ -135,15 +139,21 @@ export const Navbar = () => {
                     <LogOut className="w-5 h-5" />
                   </Button>
                 ) : (
-                  <Button 
-                    className="w-full"
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      window.location.href = '/dashboard';
-                    }}
-                  >
-                    Connect Wallet
-                  </Button>
+                  <div className="pixel-btn bg-primary-500 text-white w-full">
+                    <WalletMultiButton 
+                      style={{ 
+                        background: 'transparent', 
+                        height: 'auto', 
+                        padding: '12px 24px', 
+                        fontFamily: 'inherit', 
+                        fontSize: '16px', 
+                        fontWeight: 'bold',
+                        width: '100%'
+                      }}
+                    >
+                      Connect Wallet
+                    </WalletMultiButton>
+                  </div>
                 )}
               </div>
             </div>

@@ -1,9 +1,10 @@
 import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye, Wallet, Settings, Send, Target, Calendar, Users, Github, Twitter } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { InteractiveBackground } from '../components/InteractiveBackground';
 
 export const LandingPage = () => {
+  const navigate = useNavigate();
   return (
     // 1. Removed bg-neutral-50 so the global 8-bit gradient shows through
     <div className="min-h-screen bg-transparent font-sans text-brand-dark">
@@ -32,12 +33,12 @@ export const LandingPage = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="large" onClick={() => window.location.href = '/dashboard'}>
+            <Button size="large" onClick={() => navigate('/dashboard')}>
               Start Private Trading
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             {/* Outline button variant automatically handles the retro look based on previous config */}
-            <Button variant="outline" size="large" onClick={() => window.location.href = '/technology'}>
+            <Button variant="outline" size="large" onClick={() => navigate('/technology')}>
               Learn Technology
             </Button>
           </div>
@@ -395,7 +396,7 @@ export const LandingPage = () => {
           <p className="text-xl text-brand-dark/80 mb-8 leading-relaxed font-mono">
             Connect your wallet and start private transactions on Solana in seconds.
           </p>
-          <Button size="large" onClick={() => window.location.href = '/dashboard'}>
+          <Button size="large" onClick={() => navigate('/dashboard')}>
             <span className="sm:hidden">Launch Dashboard</span>
             <span className="hidden sm:inline">Launch ZKProtocol Dashboard</span>
             <ArrowRight className="w-5 h-5 ml-2" />
