@@ -240,23 +240,23 @@ export const TechnologyPage = () => {
           <h2 className="text-3xl lg:text-4xl font-bold font-display text-brand-dark mb-6">
             Developer Resources
           </h2>
-          <p className="text-xl text-brand-dark/80 mb-8 leading-relaxed font-mono">
+          <p className="text-xl text-brand-dark/80 mb-8 leading-relaxed font-mono text-center">
             Complete documentation and tools to build with Zero Knowledge privacy
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { label: 'Documentation', url: '#' },
-              { label: 'GitHub', url: '#' },
-              { label: 'API Reference', url: '#' },
-            ].map((link) => (
-              <a
-                key={link.label}
-                href={link.url}
-                className="pixel-card py-4 px-6 font-bold text-brand-dark hover:text-primary-600 hover:-translate-y-1 transition-transform uppercase tracking-widest text-lg bg-white/90"
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 gap-4 max-w-xs">
+              {[
+                { label: 'GitHub', url: '#' },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  className="pixel-card py-4 px-6 font-bold text-brand-dark hover:text-primary-600 hover:-translate-y-1 transition-transform uppercase tracking-widest text-lg bg-white/90 text-center"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

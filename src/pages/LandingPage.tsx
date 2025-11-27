@@ -1,4 +1,4 @@
-import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye, Wallet, Settings, Send, Target, Calendar, Users, Github, Twitter, MessageCircle } from 'lucide-react';
+import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye, Wallet, Settings, Send, Target, Calendar, Users, Github, Twitter } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { InteractiveBackground } from '../components/InteractiveBackground';
@@ -19,16 +19,16 @@ export const LandingPage = () => {
             Military-Grade Security
           </div>
           
-          <h1 className="text-5xl lg:text-6xl font-bold font-display text-brand-dark mb-6 leading-tight">
-            True Privacy on Solana
+          <h1 className="text-2xl lg:text-4xl font-bold font-display text-brand-dark mb-6 leading-tight">
+            THE ZERO-KNOWLEDGE
             <br />
             <span className="text-primary-600">
-              ZKProtocol
+              PRIVACY NETWORK
             </span>
           </h1>
           
           <p className="text-xl text-brand-dark/80 max-w-2xl mx-auto mb-8 leading-relaxed font-mono">
-            Private transactions with lightning-fast speed using ZK-SNARKs and Pedersen commitments. Complete privacy without KYC.
+            Execute private on-chain transactions using zero-knowledge technology Keep your identity and balances hidden — while staying fully verifiable
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -173,7 +173,7 @@ export const LandingPage = () => {
                       <step.icon className="w-6 h-6 text-primary-600" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold font-display text-brand-dark mb-2">
+                      <h3 className="text-lg lg:text-xl font-bold font-display text-brand-dark mb-2">
                         {step.title}
                       </h3>
                       <p className="text-lg text-brand-dark/80 leading-relaxed font-mono">{step.description}</p>
@@ -209,7 +209,7 @@ export const LandingPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold font-display text-brand-dark mb-6">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-display text-brand-dark mb-6">
                 Cryptographic Guarantees
               </h2>
               <p className="text-lg text-brand-dark/80 mb-6 leading-relaxed font-mono">
@@ -365,10 +365,9 @@ export const LandingPage = () => {
             <h3 className="text-2xl lg:text-3xl font-bold font-display text-brand-dark mb-8">
               Join Our Community
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-md mx-auto">
               {[
-                { platform: 'Discord', members: '5,000+ members', icon: MessageCircle },
-                { platform: 'Twitter', members: '10K+ followers', icon: Twitter },
+                { platform: 'Twitter', icon: Twitter },
                 { platform: 'GitHub', members: 'Open Source', icon: Github },
               ].map((social) => (
                 <div
@@ -397,7 +396,8 @@ export const LandingPage = () => {
             Connect your wallet and start private transactions on Solana in seconds.
           </p>
           <Button size="large" onClick={() => window.location.href = '/dashboard'}>
-            Launch ZKProtocol Dashboard
+            <span className="sm:hidden">Launch Dashboard</span>
+            <span className="hidden sm:inline">Launch ZKProtocol Dashboard</span>
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>
