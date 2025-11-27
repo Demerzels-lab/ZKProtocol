@@ -4,7 +4,6 @@ import { Navbar } from './components/layout/Navbar';
 import { LandingPage } from './pages/LandingPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { TechnologyPage } from './pages/TechnologyPage';
-import { AboutPage } from './pages/AboutPage';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/technology" element={<TechnologyPage />} />
-            <Route path="/about" element={<AboutPage />} />
           </Routes>
         </div>
       </BrowserRouter>

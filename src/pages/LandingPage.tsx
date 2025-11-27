@@ -1,4 +1,4 @@
-import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye, Wallet, Settings, Send } from 'lucide-react';
+import { Shield, Zap, Lock, ArrowRight, TrendingUp, CheckCircle, Eye, Wallet, Settings, Send, Target, Calendar, Users, Github, Twitter, MessageCircle } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 
@@ -248,6 +248,179 @@ export const LandingPage = () => {
                   Military-Grade Encryption
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section - Mission & Roadmap */}
+      <section className="py-24 px-6 lg:px-12 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold font-heading text-neutral-800 mb-4">
+              Privacy is a Right
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              We believe that everyone deserves financial privacy without compromise
+            </p>
+          </div>
+
+          {/* Mission Statement */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            <div className="flex items-start gap-6">
+              <div className="w-16 h-16 bg-gradient-cyber-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-cyber-md">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold font-heading text-neutral-800 mb-4">
+                  Our Mission
+                </h3>
+                <p className="text-lg text-neutral-600 mb-4 leading-relaxed">
+                  We are building privacy infrastructure for DeFi that enables anyone to transact with complete privacy, without requiring trust in third parties or violating compliance requirements.
+                </p>
+                <p className="text-lg text-neutral-600 leading-relaxed">
+                  Zero Knowledge technology is the future of blockchain privacy. With mathematical guarantees and cryptographic security, we deliver privacy that truly cannot be broken.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+              {[
+                { title: 'Privacy First', description: 'Privacy is the default, not an optional feature' },
+                { title: 'Trustless', description: 'No trusted parties or backdoors' },
+                { title: 'Open Source', description: 'Transparent code for community verification' },
+              ].map((value) => (
+                <div key={value.title} 
+                     className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-6 shadow-cyber-md"
+                     style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+                  <h4 className="text-lg font-semibold font-heading text-neutral-800 mb-2">
+                    {value.title}
+                  </h4>
+                  <p className="text-neutral-600 leading-relaxed">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Development Roadmap */}
+          <div className="mb-20">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-cyber-blue-700 text-sm font-medium mb-4 backdrop-blur-xl border border-cyber-blue-200"
+                   style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+                <Calendar className="w-4 h-4" />
+                Development Roadmap
+              </div>
+              <h3 className="text-3xl font-bold font-heading text-neutral-800">
+                Platform Evolution
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  quarter: 'Q1 2025',
+                  status: 'Completed',
+                  items: [
+                    'ZK-SNARK implementation',
+                    'Basic private transfers',
+                    'Devnet testing',
+                  ],
+                },
+                {
+                  quarter: 'Q2 2025',
+                  status: 'In Progress',
+                  items: [
+                    'Jupiter integration',
+                    'Cross-chain bridge',
+                    'Mobile wallet support',
+                  ],
+                },
+                {
+                  quarter: 'Q3 2025',
+                  status: 'Planned',
+                  items: [
+                    'Advanced privacy features',
+                    'Mainnet beta launch',
+                    'DAO governance',
+                  ],
+                },
+                {
+                  quarter: 'Q4 2025',
+                  status: 'Planned',
+                  items: [
+                    'Full mainnet launch',
+                    'Multi-chain expansion',
+                    'Institutional partnerships',
+                  ],
+                },
+              ].map((phase) => (
+                <div key={phase.quarter} 
+                     className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg shadow-cyber-md p-6 hover:shadow-cyber-lg transition-all duration-normal"
+                     style={{ background: 'rgba(255, 255, 255, 0.9)' }}>
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-lg font-bold font-heading text-neutral-800">{phase.quarter}</h4>
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium border ${
+                        phase.status === 'Completed'
+                          ? 'bg-cyber-cyan-400 bg-opacity-10 text-cyber-cyan-600 border-cyber-cyan-200'
+                          : phase.status === 'In Progress'
+                          ? 'bg-warning-500 bg-opacity-10 text-warning-600 border-warning-200'
+                          : 'bg-neutral-100 text-neutral-600 border-neutral-200'
+                      }`}
+                    >
+                      {phase.status}
+                    </span>
+                  </div>
+                  <ul className="space-y-2">
+                    {phase.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <div className="w-4 h-4 bg-gradient-cyber-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-cyber-sm">
+                          <Shield className="w-2.5 h-2.5 text-white" />
+                        </div>
+                        <span className="text-sm text-neutral-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Community */}
+          <div className="text-center">
+            <h3 className="text-3xl font-bold font-heading text-neutral-800 mb-8">
+              Join Our Community
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  platform: 'Discord',
+                  members: '5,000+ members',
+                  icon: MessageCircle,
+                },
+                {
+                  platform: 'Twitter',
+                  members: '10K+ followers',
+                  icon: Twitter,
+                },
+                {
+                  platform: 'GitHub',
+                  members: 'Open Source',
+                  icon: Github,
+                },
+              ].map((social) => (
+                <div
+                  key={social.platform}
+                  className="backdrop-blur-xl border border-cyber-blue-200 rounded-lg p-8 text-center shadow-cyber-md hover:shadow-cyber-lg hover:-translate-y-1 transition-all duration-normal group"
+                  style={{ background: 'rgba(255, 255, 255, 0.9)' }}
+                >
+                  <social.icon className="w-12 h-12 text-cyber-blue-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-xl font-semibold font-heading text-neutral-800 mb-2">
+                    {social.platform}
+                  </h4>
+                  <p className="text-neutral-600">{social.members}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
