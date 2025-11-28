@@ -368,19 +368,22 @@ export const LandingPage = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-md mx-auto">
               {[
-                { platform: 'Twitter', icon: Twitter },
-                { platform: 'GitHub', members: 'Open Source', icon: Github },
+                { platform: 'Twitter', icon: Twitter, url: 'https://x.com/ZKProtocolai' },
+                { platform: 'GitHub', members: 'Open Source', icon: Github, url: 'https://github.com/Demerzels-lab/ZKProtocol' },
               ].map((social) => (
-                <div
+                <a
                   key={social.platform}
-                  className="pixel-card p-8 text-center group hover:-translate-y-1 transition-transform"
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pixel-card p-8 text-center group hover:-translate-y-1 transition-transform block"
                 >
                   <social.icon className="w-12 h-12 text-primary-600 mx-auto mb-4" />
                   <h4 className="text-xl font-bold font-display text-brand-dark mb-2">
                     {social.platform}
                   </h4>
                   <p className="text-brand-dark/80 font-mono">{social.members}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>

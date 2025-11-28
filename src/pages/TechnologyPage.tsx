@@ -246,7 +246,7 @@ export const TechnologyPage = () => {
           <div className="flex justify-center">
             <div className="grid grid-cols-1 gap-4 max-w-xs">
               {[
-                { label: 'GitHub', url: '#' },
+                { label: 'GitHub', url: 'https://github.com/Demerzels-lab/ZKProtocol' },
               ].map((link) => (
                 <a
                   key={link.label}
