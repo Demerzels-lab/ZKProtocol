@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, LogOut, Wallet } from 'lucide-react';
+import { Menu, X, LogOut, Wallet, Twitter } from 'lucide-react';
 import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
@@ -67,7 +67,19 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Wallet Action */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            {/* Twitter Link */}
+            <a
+              href="https://x.com/ZKProtocolai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border-2 border-brand-dark bg-white hover:bg-primary-50 flex items-center justify-center transition-all hover:shadow-sm group"
+              aria-label="Follow us on Twitter"
+            >
+              <Twitter className="w-5 h-5 text-brand-dark group-hover:text-primary-600" />
+            </a>
+
+            {/* Wallet Action */}
             {connected && publicKey ? (
               <div className="flex items-center gap-2">
                 <Button 
@@ -90,7 +102,7 @@ export const Navbar = () => {
               </div>
             ) : (
               <div className="pixel-btn bg-primary-500 text-white">
-                <WalletMultiButton style={{ background: 'transparent', height: 'auto', padding: '12px 24px', fontFamily: 'inherit', fontSize: '16px', fontWeight: 'bold' }}>
+                <WalletMultiButton style={{ background: 'transparent', height: 'auto', padding: '8px 24px', fontFamily: 'inherit', fontSize: '16px', fontWeight: 'bold' }}>
                   Connect Wallet
                 </WalletMultiButton>
               </div>
@@ -125,6 +137,18 @@ export const Navbar = () => {
                 </Link>
               ))}
               
+              {/* Twitter Link - Mobile */}
+              <a
+                href="https://x.com/ZKProtocolai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-2xl font-bold font-sans uppercase tracking-widest py-2 border-b-2 border-transparent hover:border-brand-dark/20 text-brand-dark hover:text-primary-600 transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Twitter className="w-6 h-6" />
+                Twitter
+              </a>
+              
               <div className="pt-4 border-t-2 border-brand-dark/10">
                 {connected && publicKey ? (
                   <Button 
@@ -144,7 +168,7 @@ export const Navbar = () => {
                       style={{ 
                         background: 'transparent', 
                         height: 'auto', 
-                        padding: '12px 24px', 
+                        padding: '8px 24px', 
                         fontFamily: 'inherit', 
                         fontSize: '16px', 
                         fontWeight: 'bold',
