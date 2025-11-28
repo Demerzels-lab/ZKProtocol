@@ -337,7 +337,7 @@ export const LandingPage = () => {
                     <span
                       className={`px-2 py-1 text-xs font-bold border-2 border-brand-dark uppercase ${
                         phase.status === 'Completed'
-                          ? 'bg-success-500 text-white'
+                          ? 'bg-success-500 text-brand-dark'
                           : phase.status === 'In Progress'
                           ? 'bg-warning-500 text-brand-dark'
                           : 'bg-white text-brand-dark'
