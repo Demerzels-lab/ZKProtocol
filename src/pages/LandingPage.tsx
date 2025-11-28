@@ -311,22 +311,22 @@ export const LandingPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  quarter: 'Q1 2025',
+                  quarter: 'Q4 2025',
                   status: 'Completed',
                   items: ['ZK-SNARK implementation', 'Basic private transfers', 'Devnet testing'],
                 },
                 {
-                  quarter: 'Q2 2025',
+                  quarter: 'Q1 2026',
                   status: 'In Progress',
                   items: ['Jupiter integration', 'Cross-chain bridge', 'Mobile wallet support'],
                 },
                 {
-                  quarter: 'Q3 2025',
+                  quarter: 'Q2 2026',
                   status: 'Planned',
                   items: ['Advanced privacy features', 'Mainnet beta launch', 'DAO governance'],
                 },
                 {
-                  quarter: 'Q4 2025',
+                  quarter: 'Q3 2026',
                   status: 'Planned',
                   items: ['Full mainnet launch', 'Multi-chain expansion', 'Institutional partnerships'],
                 },
